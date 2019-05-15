@@ -20,24 +20,24 @@ class List extends React.Component {
   }
 
   static defaultProps = {
-  description: settings.defaultListDescription,
-}
+    description: settings.defaultListDescription,
+  }
 
-addColumn(title){
-  this.setState(state => (
-    {
-      columns: [
-        ...state.columns,
-        {
-          key: state.columns[state.columns.length - 1].key + 1,
-          title,
-          icon: 'list-alt',
-          cards: []
-        }
-      ]
-    }
-  ));
-}
+  addColumn(title){
+    this.setState(state => (
+      {
+        columns: [
+          ...state.columns,
+          {
+            key: state.columns[state.columns.length - 1].key + 1,
+            title,
+            icon: 'list-alt',
+            cards: [],
+          },
+        ],
+      }
+    ));
+  }
 
   render() {
     return (
@@ -58,7 +58,7 @@ addColumn(title){
           <Creator text = {settings.columnCreatorText} action = {title => this.addColumn(title)} />
         </div>
       </section>
-    )
+    );
   }
 }
 
