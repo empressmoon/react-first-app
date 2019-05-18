@@ -17,7 +17,9 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
+
         <Search />
+        
         {lists.map(listData => (
           <List key={listData.id} {...listData} />
         ))}
