@@ -10,7 +10,6 @@ import Container from '../Container/Container.js';
 
 class List extends React.Component {
 
-
   static propTypes  = {
     title: PropTypes.node.isRequired,
     image: PropTypes.string,
